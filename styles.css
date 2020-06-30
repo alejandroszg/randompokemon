@@ -121,21 +121,24 @@
 }
 
 .poke-card {
-    width: 25%;
+    width: 50%;
     text-align: center;
     color: #fff;
-    background: #1f1f1f;   
+    background: #2c2c2c;   
 }
 
 .poke-card img {
     transform: scale(1.3);
+    padding: 5px;
 }
 
 .poke-tittle::first-letter {
     text-transform: uppercase;
 }
 
-
+.titulo {
+    text-transform: capitalize;
+}
 
 
 /*=====  End of Lista de Pokemones  ======*/
