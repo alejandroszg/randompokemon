@@ -22,7 +22,38 @@ async function imprimirPokemones (pokemones, idPokemones){
     const pokeColorApi = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${idPokemones}`);
     const pokeColorGroup = await pokeColorApi.json();
     const pokeColor = pokeColorGroup.color.name;
-    div.style.backgroundColor = `${pokeColor}`;
+    switch (pokeColor){
+        case 'black':
+            div.style.backgroundColor = '#262626';
+            break;
+        case 'blue':
+            div.style.backgroundColor = '#2196F3';
+            break;
+        case 'brown':
+            div.style.backgroundColor = '#795548';
+            break;
+        case 'gray':
+            div.style.backgroundColor = '#B2BEC3';
+            break;
+        case 'green':
+            div.style.backgroundColor = '#4E8644';
+            break;
+        case 'pink':
+            div.style.backgroundColor = '#ECB0B6';
+            break;
+        case 'purple':
+            div.style.backgroundColor = '#7E47A4';
+            break;
+        case 'red':
+            div.style.backgroundColor = '#D52625';
+            break;
+        case 'white':
+            div.style.backgroundColor = '#FCFCF5';
+            break;
+        case 'yellow':
+            div.style.backgroundColor = '#FFE164';
+            break;       
+}
     div.innerHTML = 
     `
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idPokemones}.png" class="foto" alt="">
@@ -33,4 +64,5 @@ async function imprimirPokemones (pokemones, idPokemones){
     const contenedorPokemon = document.getElementById('div-pokemon');
     contenedorPokemon.appendChild(div);
     
+
 }
