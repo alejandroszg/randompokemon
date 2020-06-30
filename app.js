@@ -18,13 +18,19 @@ async function imprimirPokemones (pokemones, idPokemones){
     const tipoPokemon = jsonPokemon.types[0].type.name;
     
     const div = document.getElementById('poke-tarjeta');
+    //Add color to the poke-card background
+    const pokeColorApi = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${idPokemones}`);
+    const pokeColorGroup = await pokeColorApi.json();
+    const pokeColor = pokeColorGroup.color.name;
+    div.style.backgroundColor = `${pokeColor}`;
     div.innerHTML = 
     `
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idPokemones}.png" class="foto" alt="">
-        <p class="poke-number"><b>Id:</b> ${idPokemones}</p>
-        <p class="poke-tittle titulo"><b>Pokemon:</b> ${nombrePokemon}</p>
-        <p class="poke-type titulo"><b>Type:</b> ${tipoPokemon}</p>
+        <p class="poke-number"><span class="fondo"><b>Id:</b> ${idPokemones}</span></p>
+        <p class="poke-tittle titulo"><span class="fondo"><b>Pokemon:</b> ${nombrePokemon}</span></p>
+        <p class="poke-type titulo"><span class="fondo"><b>Type:</b> ${tipoPokemon}</span></p>
     `
     const contenedorPokemon = document.getElementById('div-pokemon');
     contenedorPokemon.appendChild(div);
+    
 }
