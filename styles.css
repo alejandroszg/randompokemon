@@ -148,3 +148,19 @@
 }
 /*=====  End of Lista de Pokemones  ======*/
 
+.copy{
+    display: inline-block;
+    text-align: center;
+}
+
+.copy a {
+    text-decoration: none;
+    font-weight: bold;
+    color: darkblue;
+    border-bottom: 1px dashed darkblue;
+}
+
+.copy a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
