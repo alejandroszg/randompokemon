@@ -1,0 +1,142 @@
+
+
+/*=============================================
+=            Formulario            =
+=============================================*/
+            @font-face {
+                font-family: "Pokemon";
+                src: url('Pokemon_Hollow.ttf')
+            }
+            
+            header {
+                font-family: 'Pokemon';
+                font-size: 24px;
+                line-height: 24px;
+                text-align: center;
+                margin-bottom: 20px;
+                color: #fff;
+            }
+            
+            body {
+                background-color: #B4AC73;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 100%;
+            }
+            
+            .formulario {
+                background: #e6e6b4;
+                height: 80%;
+                width: 60%;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                padding: 10px 15px;
+                text-align: center;
+            }
+            
+            .contenedor {
+                display: flex;
+                flex-flow: column;
+                width: 90%;
+                margin: 0 auto;
+                border: 1px solid white;
+                max-width: 1000px;
+            }
+            
+            .nombre, .tipo {
+                text-align: center
+            }
+            
+            .titulo1 {
+                margin: 5px 0 10px 0;
+                font-weight: bold;
+                text-align: center;
+                color: #730018;
+            }
+            
+            .nombre-pokemon {
+                padding: 8px 5px;
+                width: 90%;
+                margin: 0 auto;
+                border-radius: 3px;
+                background: #f1f1f1;
+                border: 1px solid #ccc;
+            }
+            
+            .tipo-pokemon {
+                padding: 8px 5px;
+                width: 90%;
+                margin: 0 auto;
+                border-radius: 3px;
+                background: #f1f1f1;
+                border: 1px solid #ccc;
+            }
+            
+            .nombre-pokemon:focus {
+                border: none;
+                outline: none;
+            }
+            
+            .titulo2 {
+                margin: 15px 0 10px 0;
+                font-weight: bold;
+                text-align: center;
+                color: #730018;
+            }
+            
+            .btn-consultar {
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 5px 10px;
+                border-radius: 3px;
+                margin-top: 10px;
+                background-color: #B96D40;
+                color: white;
+                border: 1px solid #a55e35;
+                transition-property: all;
+                transition-duration: 200ms;
+            }
+            
+            .btn-consultar:hover {
+                transform: scale(1.1);
+            }
+
+
+
+/*=====  End of Formulario  ======*/
+
+
+
+/*=============================================
+=            Lista de Pokemones            =
+=============================================*/
+
+.lista-pokemon{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.poke-card {
+    width: 25%;
+    text-align: center;
+    color: #fff;
+    background: #1f1f1f;   
+}
+
+.poke-card img {
+    transform: scale(1.3);
+}
+
+.poke-tittle::first-letter {
+    text-transform: uppercase;
+}
+
+
+
+
+/*=====  End of Lista de Pokemones  ======*/
+
