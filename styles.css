@@ -1,121 +1,54 @@
+body {
+    background-color: #34495e;
+    font-family: 'Open Sans', sans-serif;
+}
 
+header {
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+    color: #FEFFFF;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.74);
+}
 
-/*=============================================
-=            Formulario            =
-=============================================*/
-            @font-face {
-                font-family: "Pokemon";
-                src: url('Pokemon_Hollow.ttf')
-            }
-            
-            header {
-                font-family: 'Pokemon';
-                font-size: 24px;
-                line-height: 24px;
-                text-align: center;
-                margin-bottom: 20px;
-                color: #fff;
-            }
-            
-            body {
-                background-color: #B4AC73;
-                font-family: Arial, Helvetica, sans-serif;
-                width: 100%;
-            }
-            
-            .formulario {
-                background: #e6e6b4;
-                height: 80%;
-                width: 60%;
-                margin: 0 auto;
-                margin-bottom: 20px;
-                border-radius: 8px;
-                padding: 10px 15px;
-                text-align: center;
-            }
-            
-            .contenedor {
-                display: flex;
-                flex-flow: column;
-                width: 90%;
-                margin: 0 auto;
-                max-width: 1000px;
-            }
-            
-            .nombre, .tipo {
-                text-align: center
-            }
-            
-            .titulo1 {
-                margin: 5px 0 10px 0;
-                font-weight: bold;
-                text-align: center;
-                color: #730018;
-            }
-            
-            .nombre-pokemon {
-                padding: 8px 5px;
-                width: 90%;
-                margin: 0 auto;
-                border-radius: 3px;
-                background: #f1f1f1;
-                border: 1px solid #ccc;
-            }
-            
-            .tipo-pokemon {
-                padding: 8px 5px;
-                width: 90%;
-                margin: 0 auto;
-                border-radius: 3px;
-                background: #f1f1f1;
-                border: 1px solid #ccc;
-            }
-            
-            .nombre-pokemon:focus {
-                border: none;
-                outline: none;
-            }
-            
-            .titulo2 {
-                margin: 15px 0 10px 0;
-                font-weight: bold;
-                text-align: center;
-                color: #730018;
-            }
-            
-            .btn-consultar {
-                cursor: pointer;
-                font-weight: bold;
-                font-size: 20px;
-                padding: 5px 10px;
-                border-radius: 3px;
-                /* margin-top: 10px; */
-                background-color: #B96D40;
-                color: white;
-                border: 1px solid #a55e35;
-                transition-property: all;
-                transition-duration: 200ms;
-            }
-            
-            .btn-consultar:hover {
-                transform: scale(1.1);
-            }
+.contenedor {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
 
+.nombre, .tipo {
+    text-align: center
+}
 
+.btn-consultar {
+    align-self: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 3px;
+    background-color: #2d3436;
+    color: #FEFFFF;
+    border: none;
+    transition-property: all;
+    transition-duration: 200ms;
+    -webkit-box-shadow: 4px 3px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 3px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 4px 3px 5px -2px rgba(0,0,0,0.75);
+    margin: 10px 0 30px 0;
+}
 
-/*=====  End of Formulario  ======*/
-
-
-
-/*=============================================
-=            Lista de Pokemones            =
-=============================================*/
+.btn-consultar:hover {
+    transform: scale(1.1);
+}
 
 .lista-pokemon{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    width: 100%;
+    width: 60%;
     margin: 20px auto;
 }
 
@@ -123,8 +56,8 @@
     border-radius: 8px;
     width: 100%;
     text-align: center;
-    color: #fff;
-    background: #2c2c2c;   
+    background: #2c2c2c;
+    color: #FEFFFF;
 }
 
 .poke-card img {
@@ -143,24 +76,33 @@
 .fondo {
     display: inline-block;
     background-color: rgba(0, 0, 0, .3);
-    padding: 2px 5px;
+    padding: 5px;
     border-radius: 5%;
 }
-/*=====  End of Lista de Pokemones  ======*/
 
-.copy{
-    display: inline-block;
+.copy {
     text-align: center;
+    color: #FEFFFF;
 }
 
 .copy a {
     text-decoration: none;
-    font-weight: bold;
-    color: darkblue;
-    border-bottom: 1px dashed darkblue;
+    color: #FEFFFF;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    transition-property: all;
+    transition-duration: 300ms;
 }
 
 .copy a:hover {
-    color: white;
-    border-bottom: 1px solid white;
+    color: yellow;
+    border-bottom: 1px solid yellow;
+}
+
+
+/*----------  MEDIA QUERIES  ----------*/
+@media screen and (max-width: 500px) {
+    .lista-pokemon {
+        width: 90%;
+    }
 }
