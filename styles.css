@@ -40,8 +40,8 @@ header {
     margin: 10px 0 30px 0;
 }
 
-.btn-consultar:hover {
-    transform: scale(1.1);
+.btn-consultar:active {
+    transform: scale(0.9);
 }
 
 .lista-pokemon{
