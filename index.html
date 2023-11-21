@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokerandom - By: Alejandro Sánchez</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="contenedor">
-        <header>
-            <h1>PokeRandom</h1>
-        </header>
 
-        <button class="btn-consultar" id="boton">Generate a Random Pokemon!</button>
-            <div class="lista-pokemon" id="div-pokemon">
-                <div class="poke-card" id="poke-tarjeta"></div>
-            </div>
-            <div class="copy">Made by: <a href="https://github.com/alejandroszg" target="_blank">Alejandro Sánchez</a></div>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeRandom - By: Alejandro Sánchez</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1 class="title">PokeRandom</h1>
+  </header>
+
+  <main class="main-content">
+    <button class="btn-generate" id="boton">Generate a Random Pokemon!</button>
+    <section class="pokemon-list" id="div-pokemon">
+      <article class="pokemon-card" id="poke-tarjeta"></article>
+    </section>
+    <footer class="page-footer">Made by: <a href="https://github.com/alejandroszg" target="_blank">Alejandro Sánchez</a>
+    </footer>
+  </main>
+
+  <script src="scripts/main.js"></script>
 </body>
-<script src="app.js"></script>
+
 </html>
